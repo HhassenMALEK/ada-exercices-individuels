@@ -1,36 +1,36 @@
-
-
-let numberSought= Math.floor(Math.random() * 50);
-function gamePlay(){
-let retourDidIWin = false
-let i=0
+function gamePlay(numberSought){ 
+    let retourDidIWin = false
+    let i=0
+//boucle de prompt pour deviner le numéro seceret   
 while( retourDidIWin == false){
-    let givenNumber=prompt("Deviner le numéro caché : ")
+    let givenNumber=prompt("Deviner le numéro secret: ")
     retourDidIWin=didIWin(givenNumber, numberSought)
     i++
 } 
-console.log(i)
-document.body.innerHTML += "<h1> vous avez joué " + i +" fois pour trouver le numéro caché</h1>"
+console.log("nombre de jeu" +i)
+let roundsPlayed= "vous avez joué " + i +" fois pour trouver le numéro secret"
+document.getElementById("indicateur").innerText += roundsPlayed
 }
-//fonction didIWin() contrôle et affiche le numéro entré par l'utilisateur s'il est petit ou grand par rapport au numéro caché
+//fonction didIWin() contrôle et affiche le numéro entré par l'utilisateur 
 function didIWin(givenNumber, numberSought){
     if (givenNumber >numberSought) {
-        alert(givenNumber +" est plus grand")
+        higerNumber= givenNumber +" est plus grand que le numéro secret"
+        alert(higerNumber)
         return false; 
     } 
     else if (givenNumber < numberSought) {
-        alert(givenNumber +" est  plus petit ") 
+        lowerNumber= givenNumber +" est plus petit que le numéro secret "
+        alert(lowerNumber) 
         return false;   
     }     
     else {
-        
-        console.log("Bravo vous avez deviné le nombre: "+ numberSought) 
-        document.body.innerHTML += "<h1> Bravo vous avez deviné le nombre: "+ numberSought +"</h1>"   
+        numberFound="Bravo vous avez deviné le numéro secret: "+ numberSought 
+        console.log("numéro secret"+ numberSought)  
+       document.getElementById("numeroTrouvee").innerText += numberFound
         return true
     }
 }
 
-    
  
 
  
