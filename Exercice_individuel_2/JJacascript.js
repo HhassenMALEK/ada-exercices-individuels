@@ -1,28 +1,33 @@
-function gamePlay(){
-let number_sought= 22
-do     {
-    let GivenNumber=prompt("Deviner le numéro caché : ")
-    didIWin(GivenNumber, number_sought)
-}while (didIWin == true)
-}
 
+
+let numberSought= Math.floor(Math.random() * 50);
+function gamePlay(){
+
+let retourDidIWin = false
+while( retourDidIWin == false){
+    let givenNumber=prompt("Deviner le numéro caché : ")
+    retourDidIWin=didIWin(givenNumber, numberSought)
+} 
+}
 //fonction didIWin() contrôle et affiche le numéro entré par l'utilisateur s'il est petit ou grand par rapport au numéro caché
-function didIWin(GivenNumber, number_sought){
-    if (GivenNumber > number_sought) {
-        alert(GivenNumber +" est plus grand")
+function didIWin(givenNumber, numberSought){
+    if (givenNumber >numberSought) {
+        alert(givenNumber +" est plus grand")
         return false; 
     } 
-    else if (GivenNumber < number_sought) {
-        alert(GivenNumber +" est  plus petit ") 
+    else if (givenNumber < numberSought) {
+        alert(givenNumber +" est  plus petit ") 
         return false;   
     }     
     else {
-        alert("Bravo vous avez deviné le nombre: "+ number_sought)
-        console.log("Bravo vous avez deviné le nombre: "+ number_sought) 
-        document.body.innerHTML += "<h1> Bravo vous avez deviné le nombre: "+ number_sought +"</h1>"   
+        
+        console.log("Bravo vous avez deviné le nombre: "+ numberSought) 
+        document.body.innerHTML += "<h1> Bravo vous avez deviné le nombre: "+ numberSought +"</h1>"   
         return true
     }
     }
-    
+
+    //var randomNumber = Math.floor(Math.random() * 51);
+ 
 
  
