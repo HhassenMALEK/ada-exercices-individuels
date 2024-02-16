@@ -1,4 +1,22 @@
+
+   /* contrainer sert a centrer les boutons dans un rectangle*/
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid rgb(91, 22, 38);
+        height: 300px;
+   }
+      button {
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        background: rgb(206, 19, 44);
+      }
+   
+
 h1 {
     color: rgb(173, 72, 50);
     background-color: rgba(192, 230, 186, 0.322);
+    text-align: center;
 }

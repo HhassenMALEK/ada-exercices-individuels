@@ -8,7 +8,7 @@ while( retourDidIWin == false){
     i++
 } 
 console.log("nombre de jeu" +i)
-let roundsPlayed= "vous avez joué " + i +" fois pour trouver le numéro secret"
+let roundsPlayed= "Vous avez joué " + i +" fois pour trouver le numéro secret: " + numberSought
 document.getElementById("indicateur").innerText += roundsPlayed
 }
 //fonction didIWin() contrôle et affiche le numéro entré par l'utilisateur 
@@ -24,7 +24,7 @@ function didIWin(givenNumber, numberSought){
         return false;   
     }     
     else {
-        numberFound="Bravo vous avez deviné le numéro secret: "+ numberSought 
+        numberFound="Bravo vous avez gagné: "
         console.log("numéro secret"+ numberSought)  
        document.getElementById("numeroTrouvee").innerText += numberFound
         return true
