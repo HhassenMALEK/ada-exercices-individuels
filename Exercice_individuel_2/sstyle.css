@@ -1,7 +1,7 @@
 
    /* contrainer sert a centrer les boutons dans un rectangle*/
     .container {
-        display: flex;
+        display: grid;
         align-items: center;
         justify-content: center;
         border: 2px solid rgb(91, 22, 38);
