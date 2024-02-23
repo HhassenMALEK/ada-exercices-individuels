@@ -24,10 +24,11 @@ while( retourDidIWin1 == false || retourDidIWin2 == false){
         break;
        }
     let givenNumber2=prompt("joueur 2 : devinez le numero secret: ")
-        retourDidIWin2=didIWin(givenNumber2, numberSought)
-  
-       break 
+        retourDidIWin2=didIWin(givenNumber2, numberSought) 
+        if (retourDidIWin2== true){
+            break;             
 } 
+}
 console.log("nombre de jeu " +i)
 let roundsPlayed= "Vous avez joué " + i +" fois pour trouver le numèro secret: " + numberSought
 document.getElementById("indicateur").innerText += roundsPlayed
