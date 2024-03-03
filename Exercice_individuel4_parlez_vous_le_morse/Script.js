@@ -73,14 +73,32 @@ function decode(phrase2){
       return char
 }
 
-let phrase = "hello world"
-let phrase2 = ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
 
-console.log(phrase)
-getLatinCharacterList (phrase)
-let morse = encode(phrase);
-console.log("morse " +morse);
-document.getElementById("characterMorse").innerText += " la traduction de  "+phrase+" en morse est :  "+ morse
-let latin = decode(phrase2)
-console.log("latin "+ latin)
-document.getElementById("phraseMorse").innerText += " la traduction de  "+phrase2+" en latin est :  "+ latin
+let inputText = document.getElementById("inputText");
+let Button = document.getElementById("Button");
+Button.addEventListener("click", function() {
+    // Récupérer le texte saisi
+     phrase = inputText.value;
+     console.log("Texte saisi :", phrase);
+     getLatinCharacterList (phrase)
+     morse = encode(phrase);
+     console.log("morse " +morse);
+     document.getElementById("characterMorse").innerText += " la traduction de  "+phrase+" en morse est :  "+ morse
+     
+    });
+
+
+// let inputText2 = document.getElementById("inputText2");
+// let Button = document.getElementById("Button2");
+// Button.addEventListener("click", function() {
+//     phrase2 =inputText2.value
+//     latin = decode(phrase2)
+//     console.log("latin "+ latin)
+//     document.getElementById("phraseMorse").innerText += " la traduction de  "+phrase2+" en latin est :  "+ latin
+//     });
+
+
+
+
+
+
