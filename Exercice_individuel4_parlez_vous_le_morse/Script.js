@@ -27,7 +27,7 @@ function encode(phrase) {
             morseCode +=" ";
         }
     }
-    // Retirer les espaces en trop à la fin et au début
+    // Retirer les espaces à la fin et au début
     return morseCode.trim(); 
 }
 
@@ -78,24 +78,24 @@ let inputText = document.getElementById("inputText");
 let Button = document.getElementById("Button");
 Button.addEventListener("click", function() {
     // Récupérer le texte saisi
-     phrase = inputText.value;
-     console.log("Texte saisi :", phrase);
-     getLatinCharacterList (phrase)
-     morse = encode(phrase);
-     console.log("morse " +morse);
-     document.getElementById("characterMorse").innerText += " la traduction de  "+phrase+" en morse est :  "+ morse
-     
+    phrase = inputText.value;
+    console.log("Texte saisi :", phrase);
+    getLatinCharacterList (phrase)
+    morse = encode(phrase);
+    console.log("morse " +morse);
+    document.getElementById("characterMorse").innerText += " la traduction de  "+phrase+" en morse est :  "+ morse
+    
     });
 
 
-// let inputText2 = document.getElementById("inputText2");
-// let Button = document.getElementById("Button2");
-// Button.addEventListener("click", function() {
-//     phrase2 =inputText2.value
-//     latin = decode(phrase2)
-//     console.log("latin "+ latin)
-//     document.getElementById("phraseMorse").innerText += " la traduction de  "+phrase2+" en latin est :  "+ latin
-//     });
+let inputText2 = document.getElementById("inputText2");
+let Button2 = document.getElementById("Button2");
+Button2.addEventListener("click", function() {
+    phrase2 =inputText2.value
+    latin = decode(phrase2)
+    console.log("latin "+ latin)
+    document.getElementById("phraseMorse").innerText += " la traduction de  "+phrase2+" en latin est :  "+ latin
+    });
 
 
 
