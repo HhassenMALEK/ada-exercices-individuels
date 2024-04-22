@@ -1,17 +1,42 @@
 
+
 function getLatinCharacterList (phrase) {
-    phraseSplit  = phrase.split("");
-    console.log(phraseSplit); 
+    
+    return phrase.split("");
 }
+getLatinCharacterList("hello World"); 
 function encode(phrase) {
-    const latinToMorse = {
-        'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....', 
-        'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 
-        'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 
-        'Y': '-.--', 'Z': '--..',' ':'/' 
+    let latinToMorse = {
+        'A': '.-' ,
+        'B': '-...' ,
+        'C': '-.-.' , 
+        'D': '-..' , 
+        'E': '.' ,
+        'F': '..-.' ,
+        'G': '--.' ,
+        'H': '....' , 
+        'I': '..' ,
+        'J': '.---' , 
+        'K': '-.-' , 
+        'L': '.-..' ,
+        'M': '--' ,
+        'N': '-.' , 
+        'O': '---' ,
+        'P': '.--.' , 
+        'Q': '--.-' ,
+        'R': '.-.' ,
+        'S': '...' , 
+        'T': '-' ,
+        'U': '..-' , 
+        'V': '...-' , 
+        'W': '.--' , 
+        'X': '-..-' , 
+        'Y': '-.--' , 
+        'Z': '--..' ,
+        ' ':'/' 
     };
      // Convertir la phrase en majuscules 
-    phrase = phrase.toUpperCase();
+        phrase = phrase.toUpperCase();
 
     let morseCode = "";
     
@@ -32,7 +57,7 @@ function encode(phrase) {
 }
 
 function decode(phrase2){
-     const morseToLatin = {
+     let morseToLatin = {
         '-': "T",
         '--': "M",
         '---': "O",
@@ -78,7 +103,7 @@ let inputText = document.getElementById("inputText");
 let Button = document.getElementById("Button");
 Button.addEventListener("click", function() {
     // Récupérer le texte saisi
-    phrase = inputText.value;
+   let phrase = inputText.value;
     console.log("Texte saisi :", phrase);
     getLatinCharacterList (phrase)
     morse = encode(phrase);
@@ -91,10 +116,10 @@ Button.addEventListener("click", function() {
 let inputText2 = document.getElementById("inputText2");
 let Button2 = document.getElementById("Button2");
 Button2.addEventListener("click", function() {
-    phrase2 =inputText2.value
-    latin = decode(phrase2)
-    console.log("latin "+ latin)
-    document.getElementById("phraseMorse").innerText += " la traduction de  "+phrase2+" en latin est :  "+ latin
+let phrase2 =inputText2.value
+let latin = decode(phrase2)
+console.log("latin "+ latin)
+document.getElementById("phraseMorse").innerText += " la traduction de  "+phrase2+" en latin est :  "+ latin
     });
 
 
